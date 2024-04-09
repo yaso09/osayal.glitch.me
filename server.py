@@ -17,7 +17,8 @@ def master():
 def bilet(ticket):
     return render_template(
         "ticket.html", ticket=ticket,
-        GOOGLE_APPS_SCRIPT_ID=GOOGLE_APPS_SCRIPT_ID
+        GOOGLE_APPS_SCRIPT_ID=GOOGLE_APPS_SCRIPT_ID,
+        site=status["site"]
     )
 
 @app.route("/istatistikler")

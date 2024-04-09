@@ -1,7 +1,7 @@
 from flask import *
 app = Flask(__name__)
 
-GOOGLE_APPS_SCRIPT_ID = "AKfycbwRhsj2zQNYUDlwSVlhs8LKbnPZuvh_M7A_l347I3USLVhwurf4-Y_QpgC0bt9g0Df34w"
+GOOGLE_APPS_SCRIPT_ID = "AKfycbyWY4yUDJVWUCPQLcKW6axqDP0bIECqz99IanBavXGQ4Xc2VuG6qmW-tLCo0TgzyHbO"
 
 status = {
     "site": 0,
@@ -11,7 +11,7 @@ status = {
 @app.route("/")
 def master():
     return render_template("index.html",
-    site=status["site"], statistics=status["statistics"])
+    site=status["site"])
 
 @app.route("/bilet/<ticket>")
 def bilet(ticket):
@@ -24,7 +24,8 @@ def bilet(ticket):
 def istatistikler():
     return render_template(
         "statistics.html",
-        GOOGLE_APPS_SCRIPT_ID=GOOGLE_APPS_SCRIPT_ID
+        GOOGLE_APPS_SCRIPT_ID=GOOGLE_APPS_SCRIPT_ID,
+        statistics=status["statistics"]
     )
 
 @app.errorhandler(404)

@@ -1,7 +1,10 @@
 from flask import *
 app = Flask(__name__)
 
-GOOGLE_APPS_SCRIPT_ID = "AKfycbyWY4yUDJVWUCPQLcKW6axqDP0bIECqz99IanBavXGQ4Xc2VuG6qmW-tLCo0TgzyHbO"
+with open("id.txt", "r") as f:
+    ctn = f.readline(0)
+    global GOOGLE_APPS_SCRIPT_ID
+    GOOGLE_APPS_SCRIPT_ID = ctn
 
 status = {
     "site": 0,

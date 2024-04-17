@@ -5,9 +5,10 @@ const ss = SpreadsheetApp.openById(ssid);
 const adaylar = ss.getSheetByName("Adaylar");
 const oylar = ss.getSheetByName("Oylar");
 
+let ticket;
+
 function getTicket() {
-    return PropertiesService
-    .getScriptProperties().getProperty("ticket");
+    return ticket;
 }
 
 function getAdaylar() {
@@ -55,9 +56,7 @@ function oyVer(name) {
 }
 
 function doGet(e) {
-    let ticket = e.parameter.ticket;
-    PropertiesService.getScriptProperties()
-    .setProperty("ticket", ticket);
+    ticket = e.parameter.ticket;
     let type = e.parameter.type;
     return render(ticket, type);
 }

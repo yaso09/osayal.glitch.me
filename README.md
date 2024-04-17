@@ -1,5 +1,3 @@
-# osayal.vercel.app
-ne bakıyonuz la gidin youtube fln izleyin oylamayı ne yapacaksınız aq
-
-~ Yasir Eymen KAYABAŞI
-
+# ÖŞAYAL Bilet Sistemi
+> Biz UHAL gibi GH Pages kullanmıyoruz (Vercel'de çalıştırmayı beceremedim)
+Anlatmaya üşeniyorum, basit bir site zaten gidin kendiniz bakın.
